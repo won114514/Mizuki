@@ -408,7 +408,19 @@ export const expressiveCodeConfig: ExpressiveCodeConfig = {
 };
 
 export const commentConfig: CommentConfig = {
-	enable: false, // 启用评论功能。当设置为 false 时，评论组件将不会显示在文章区域。
+	enable: true, // 启用评论功能。当设置为 false 时，评论组件将不会显示在文章区域。
+	giscus: {
+		repo: "won114514/WONBlog-giscus", // 替换为你的 GitHub 仓库
+		repoId: "R_kgDOQq0NoQ", // 替换为你的仓库 ID
+		category: "Announcements", // 替换为你的讨论分类
+		categoryId: "DIC_kwDOQq0Noc4Cz8me", // 替换为你的分类 ID
+		mapping: "pathname",
+		strict: false,
+		reactionsEnabled: true,
+		emitMetadata: false,
+		inputPosition: "bottom",
+		lang: SITE_LANG,
+	},
 	twikoo: {
 		envId: "https://twikoo.vercel.app",
 		lang: SITE_LANG,

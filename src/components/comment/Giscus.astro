@@ -1,0 +1,57 @@
+---
+import { commentConfig, siteConfig } from "@/config";
+
+interface Props {
+	path: string;
+}
+
+const { path } = Astro.props;
+const { giscus } = commentConfig;
+---
+
+<div class="giscus-container">
+	<script
+		async
+		src="https://giscus.app/client.js"
+		data-repo={giscus?.repo}
+		data-repo-id={giscus?.repoId}
+		data-category={giscus?.category}
+		data-category-id={giscus?.categoryId}
+		data-mapping="pathname"
+		data-strict={giscus?.strict ? "1" : "0"}
+		data-reactions-enabled={giscus?.reactionsEnabled ? "1" : "0"}
+		data-emit-metadata={giscus?.emitMetadata ? "1" : "0"}
+		data-input-position={giscus?.inputPosition}
+		data-theme="preferred_color_scheme"
+		data-lang={giscus?.lang || siteConfig.lang}
+		crossorigin="anonymous"
+	></script>
+	<script>
+		// 监听主题切换，更新 giscus 主题
+		if (typeof window !== 'undefined') {
+			const observer = new MutationObserver((mutations) => {
+				mutations.forEach((mutation) => {
+					if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+						const isDark = document.documentElement.classList.contains('dark');
+						const iframe = document.querySelector('.giscus-frame');
+						if (iframe) {
+							(iframe as HTMLIFrameElement).contentWindow?.postMessage(
+								{
+									giscus: {
+										setConfig: {
+											theme: isDark ? 'dark' : 'light'
+										}
+									}
+								},
+								'https://giscus.app'
+							);
+						}
+					}
+				});
+			});
+			observer.observe(document.documentElement, {
+				attributes: true
+			});
+		}
+	</script>
+</div>

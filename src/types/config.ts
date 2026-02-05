@@ -269,15 +269,28 @@ export type PermalinkConfig = {
 };
 
 // 评论配置
-
 export type CommentConfig = {
 	enable: boolean; // 是否启用评论功能
 	twikoo?: TwikooConfig;
+	giscus?: GiscusConfig;
 };
 
 type TwikooConfig = {
 	envId: string;
 	region?: string;
+	lang?: string;
+};
+
+type GiscusConfig = {
+	repo: string;
+	repoId: string;
+	category: string;
+	categoryId: string;
+	mapping: string;
+	strict: boolean;
+	reactionsEnabled: boolean;
+	emitMetadata: boolean;
+	inputPosition: string;
 	lang?: string;
 };
 
