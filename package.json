@@ -3,6 +3,7 @@
 	"type": "module",
 	"version": "8.2",
 	"scripts": {
+		"install": "pnpm install",
 		"sync-content": "node scripts/sync-content.js",
 		"init-content": "node scripts/init-content-repo.js",
 		"predev": "node scripts/sync-content.js || true",
