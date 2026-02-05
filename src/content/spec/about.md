@@ -1,49 +1,56 @@
 
-This website is built with the **Astro** framework using the [Mizuki](https://github.com/matsuzaka-yuki/mizuki) theme.
+## 关于这个博客
 
-::github{repo="matsuzaka-yuki/Mizuki"}
+欢迎来到我的个人博客！这是一个基于 **Astro** 框架和 [Mizuki](https://github.com/won114514/mizuki) 主题搭建的个人网站。
 
-## 🌟 Theme Features
+::github{repo="won114514/Mizuki"}
 
-### 🎨 Design & User Experience
-- **Modern & Elegant Design** - Clean, minimalist interface with beautiful typography
-- **Fully Responsive** - Optimized for all devices from mobile to desktop
-- **Dark/Light Mode** - Automatic theme switching with smooth transitions
-- **Beautiful Typography** - Enhanced readability with JetBrains Mono font
-- **Smooth Animations** - Fluid page transitions and interactive elements
+### 博客简介
 
-### 🔍 Content & Search
-- **Advanced Search** - Powered by [Pagefind](https://pagefind.app/) for fast, accurate results
-- **Enhanced Markdown** - Extended syntax with code highlighting and math support
-- **Interactive Table of Contents** - Auto-scroll navigation for long articles
-- **RSS Feed Generation** - Stay updated with automatic feed generation
-- **Reading Time Estimation** - Know how long articles take to read
-- **Post Categorization** - Organize content with tags and categories
+这个博客主要用于分享我的技术学习心得、生活感悟以及各种有趣的发现。我希望通过这个平台记录自己的成长历程，同时也能为访问者提供有价值的内容。
 
+### 技术栈
 
+- **前端框架**：Astro
+- **主题**：Mizuki
+- **搜索功能**：Pagefind
+- **代码高亮**：Expressive Code
+- **数学公式**：KaTeX
+- **图片优化**：PhotoSwipe
 
-### 📱 Special Pages
-- **Anime Tracking Page** - Track your anime watching progress with ratings
-- **Friends Links Page** - Showcase friend websites with beautiful cards
-- **Diary/Moments Page** - Share life moments like social media posts
-- **Archive Page** - Organized timeline view of all posts
-- **About Page** - Customizable personal introduction (this page!)
+## 🌟 网站特色
 
-### 🛠 Technical Features
-- **Enhanced Code Blocks** - Powered by [Expressive Code](https://expressive-code.com/)
-- **Math Support** - LaTeX rendering with KaTeX for mathematical expressions
-- **Image Optimization** - PhotoSwipe gallery with lazy loading
-- **SEO Optimized** - Built-in sitemap and meta tags for better search visibility
-- **Performance Optimized** - Fast loading with caching and optimization
-- **Comment System Ready** - Integration support for Twikoo comments
+### 🎨 设计与用户体验
+- **现代优雅设计** - 简洁、极简的界面，搭配美观的排版
+- **全响应式布局** - 从移动设备到桌面端的全方位优化
+- **深色/浅色模式** - 自动主题切换，过渡平滑自然
+- **优美排版** - 使用 JetBrains Mono 字体提升可读性
+- **流畅动画效果** - 页面过渡和交互元素的流畅动画
 
-### 🎯 Advanced Markdown Features
-- **Callouts & Admonitions** - Beautiful info boxes with `> [!NOTE]`, `> [!TIP]`, `> [!WARNING]`
-- **Mathematical Equations** - Write LaTeX math with `$inline$` and `$$block$$` syntax
-- **GitHub Cards** - Embed repository cards with `::github{repo="user/repo"}`
-- **Syntax Highlighting** - Advanced code highlighting with line numbers
-- **Copy Code Buttons** - Easy code copying functionality
+### 📱 特色页面
+- **动漫追踪页** - 记录动漫观看进度并评分
+- **友链页面** - 以美观的卡片形式展示朋友网站
+- **日记/动态页** - 像社交媒体帖子一样分享生活瞬间
+- **归档页面** - 所有文章的时间线视图
+- **关于页面** - 可自定义的个人介绍（就是本页！）
+
+### 🛠 技术功能
+- **增强代码块** - 由 Expressive Code 提供支持
+- **数学公式支持** - 使用 KaTeX 渲染数学表达式
+- **图片优化** - 支持懒加载的 PhotoSwipe 图库
+- **SEO 优化** - 内置站点地图和元标签，提升搜索可见性
+- **性能优化** - 通过缓存和优化实现快速加载
+- **评论系统就绪** - 集成支持 Twikoo 评论
+
+### 🎯 高级 Markdown 功能
+- **提示框** - 使用 `> [!NOTE]`、`> [!TIP]`、`> [!WARNING]` 创建美观的信息框
+- **数学方程式** - 使用 `$inline$` 和 `$$block$$` 语法编写 LaTeX 数学公式
+- **GitHub 卡片** - 使用 `::github{repo="user/repo"}` 嵌入仓库卡片
+- **语法高亮** - 带行号的高级代码高亮
+- **代码复制按钮** - 便捷的代码复制功能
 
 ---
 
-*Built with ❤️ using Astro and inspired by modern web design principles.*
+*用 ❤️ 构建，使用 Astro 框架，灵感来自现代网页设计原则。*
+
+希望你在这个博客中找到有价值的内容！

@@ -19,13 +19,13 @@ import { LinkPreset } from "./types/config";
 // 移除i18n导入以避免循环依赖
 
 // 定义站点语言
-const SITE_LANG = "ja"; // 语言代码，例如：'en', 'zh_CN', 'ja' 等。
+const SITE_LANG = "zh_CN"; // 语言代码，例如：'en', 'zh_CN', 'ja' 等。
 const SITE_TIMEZONE = 8; //设置你的网站时区 from -12 to 12 default in UTC+8
 export const siteConfig: SiteConfig = {
-	title: "Mizuki",
-	subtitle: "One demo website",
-	siteURL: "https://mizuki.mysqil.com/", // 请替换为你的站点URL，以斜杠结尾
-	siteStartDate: "2025-01-01", // 站点开始运行日期，用于站点统计组件计算运行天数
+	title: "WONの次元",
+	subtitle: "Protect What You Love.",
+	siteURL: "https://blog.xiaowon.cn/", // 请替换为你的站点URL，以斜杠结尾
+	siteStartDate: "2025-10-25", // 站点开始运行日期，用于站点统计组件计算运行天数
 
 	timeZone: SITE_TIMEZONE,
 
@@ -51,13 +51,12 @@ export const siteConfig: SiteConfig = {
 	// 顶栏标题配置
 	navbarTitle: {
 		// 显示模式："text-icon" 显示图标+文本，"logo" 仅显示Logo
-		mode: "logo",
+		mode: "text-icon",
 		// 顶栏标题文本
-		text: "MizukiUI",
+		text: "WONの次元",
 		// 顶栏标题图标路径，默认使用 public/assets/home/home.png
-		icon: "assets/home/home.png",
-		// 网站Logo图片路径
-		logo: "assets/home/default-logo.png",
+		icon: "assets/home/home.jpg",
+		
 	},
 
 	// 页面自动缩放配置
@@ -72,8 +71,8 @@ export const siteConfig: SiteConfig = {
 	},
 
 	bilibili: {
-		vmid: "your-bilibili-vmid", // 在此处设置你的Bilibili用户ID (vmid)，例如 "1129280784"
-		fetchOnDev: false, // 是否在开发环境下获取 Bilibili 数据（默认 false）
+		vmid: "3546610866850078", // 在此处设置你的Bilibili用户ID (vmid)，例如 "1129280784"
+		fetchOnDev: true, // 是否在开发环境下获取 Bilibili 数据（默认 false）
 		SESSDATA: "", // Bilibili SESSDATA（可选，用于获取观看进度，从浏览器cookie中获取）
 		coverMirror: "", // 封面图片镜像源（可选，如果需要使用镜像源，例如 "https://images.weserv.nl/?url="）
 		useWebp: true, // 是否使用WebP格式（默认 true）
@@ -114,20 +113,20 @@ export const siteConfig: SiteConfig = {
 		// 支持单张图片或图片数组，当数组长度 > 1 时自动启用轮播
 		src: {
 			desktop: [
-				"/assets/desktop-banner/1.webp",
-				"/assets/desktop-banner/2.webp",
-				"/assets/desktop-banner/3.webp",
-				"/assets/desktop-banner/4.webp",
-				"/assets/desktop-banner/5.webp",
-				"/assets/desktop-banner/6.webp",
+				"https://eopfapi.xiaowon.cn/pic?img=ua&banner=1",
+				"https://eopfapi.xiaowon.cn/pic?img=ua&banner=2",
+				"https://eopfapi.xiaowon.cn/pic?img=ua&banner=3",
+				"https://eopfapi.xiaowon.cn/pic?img=ua&banner=4",
+				"https://eopfapi.xiaowon.cn/pic?img=ua&banner=5",
+				"https://eopfapi.xiaowon.cn/pic?img=ua&banner=6",
 			], // 桌面横幅图片
 			mobile: [
-				"/assets/mobile-banner/1.webp",
-				"/assets/mobile-banner/2.webp",
-				"/assets/mobile-banner/3.webp",
-				"/assets/mobile-banner/4.webp",
-				"/assets/mobile-banner/5.webp",
-				"/assets/mobile-banner/6.webp",
+				"https://eopfapi.xiaowon.cn/pic?img=ua&banner=1",
+				"https://eopfapi.xiaowon.cn/pic?img=ua&banner=2",
+				"https://eopfapi.xiaowon.cn/pic?img=ua&banner=3",
+				"https://eopfapi.xiaowon.cn/pic?img=ua&banner=4",
+				"https://eopfapi.xiaowon.cn/pic?img=ua&banner=5",
+				"https://eopfapi.xiaowon.cn/pic?img=ua&banner=6",
 			], // 移动横幅图片
 		}, // 使用本地横幅图片
 
@@ -155,14 +154,14 @@ export const siteConfig: SiteConfig = {
 
 		homeText: {
 			enable: true, // 在主页显示自定义文本
-			title: "わたしの部屋", // 主页横幅主标题
+			title: "WONの次元", // 主页横幅主标题
 
 			subtitle: [
-				"特別なことはないけど、君がいると十分です",
-				"今でもあなたは私の光",
-				"君ってさ、知らないうちに私の毎日になってたよ",
-				"君と話すと、なんか毎日がちょっと楽しくなるんだ",
-				"今日はなんでもない日。でも、ちょっとだけいい日",
+				"没有什么特别的事情，但是有你在就足够了",
+				"现在你依然是我的光",
+				"你知道吗，不知不觉中你已经成为了我的日常",
+				"和你聊天的话，总觉得每天都会变得稍微开心一点",
+				"今天是平凡的一天，但是，是稍微美好的一天",
 			],
 			typewriter: {
 				enable: true, // 启用副标题打字机效果
@@ -226,20 +225,20 @@ export const siteConfig: SiteConfig = {
 export const fullscreenWallpaperConfig: FullscreenWallpaperConfig = {
 	src: {
 		desktop: [
-			"/assets/desktop-banner/1.webp",
-			"/assets/desktop-banner/2.webp",
-			"/assets/desktop-banner/3.webp",
-			"/assets/desktop-banner/4.webp",
-			"/assets/desktop-banner/5.webp",
-			"/assets/desktop-banner/6.webp",
+			"https://eopfapi.xiaowon.cn/pic?img=ua&banner=1",
+			"https://eopfapi.xiaowon.cn/pic?img=ua&banner=2",
+			"https://eopfapi.xiaowon.cn/pic?img=ua&banner=3",
+			"https://eopfapi.xiaowon.cn/pic?img=ua&banner=4",
+			"https://eopfapi.xiaowon.cn/pic?img=ua&banner=5",
+			"https://eopfapi.xiaowon.cn/pic?img=ua&banner=6",
 		], // 桌面横幅图片
 		mobile: [
-			"/assets/mobile-banner/1.webp",
-			"/assets/mobile-banner/2.webp",
-			"/assets/mobile-banner/3.webp",
-			"/assets/mobile-banner/4.webp",
-			"/assets/mobile-banner/5.webp",
-			"/assets/mobile-banner/6.webp",
+			"https://eopfapi.xiaowon.cn/pic?img=ua&banner=1",
+			"https://eopfapi.xiaowon.cn/pic?img=ua&banner=2",
+			"https://eopfapi.xiaowon.cn/pic?img=ua&banner=3",
+			"https://eopfapi.xiaowon.cn/pic?img=ua&banner=4",
+			"https://eopfapi.xiaowon.cn/pic?img=ua&banner=5",
+			"https://eopfapi.xiaowon.cn/pic?img=ua&banner=6",
 		], // 移动横幅图片
 	}, // 使用本地横幅图片
 	position: "center", // 壁纸位置，等同于 object-position
@@ -264,21 +263,15 @@ export const navBarConfig: NavBarConfig = {
 			children: [
 				{
 					name: "GitHub",
-					url: "https://github.com/matsuzaka-yuki/Mizuki",
+					url: "https://github.com/won114514",
 					external: true,
 					icon: "fa7-brands:github",
 				},
 				{
 					name: "Bilibili",
-					url: "https://space.bilibili.com/701864046",
+					url: "https://space.bilibili.com/3546610866850078",
 					external: true,
 					icon: "fa7-brands:bilibili",
-				},
-				{
-					name: "Gitee",
-					url: "https://gitee.com/matsuzakayuki/Mizuki",
-					external: true,
-					icon: "mdi:git",
 				},
 			],
 		},
@@ -353,9 +346,9 @@ export const navBarConfig: NavBarConfig = {
 };
 
 export const profileConfig: ProfileConfig = {
-	avatar: "assets/images/avatar.webp", // 相对于 /src 目录。如果以 '/' 开头，则相对于 /public 目录
-	name: "まつざか ゆき",
-	bio: "世界は大きい、君は行かなければならない",
+	avatar: "https://q2.qlogo.cn/headimg_dl?dst_uin=2287365860&spec=0", // 相对于 /src 目录。如果以 '/' 开头，则相对于 /public 目录
+	name: "WON",
+	bio: "Protect What You Love.",
 	typewriter: {
 		enable: true, // 启用个人简介打字机效果
 		speed: 80, // 打字速度（毫秒）
@@ -364,27 +357,12 @@ export const profileConfig: ProfileConfig = {
 		{
 			name: "Bilibili",
 			icon: "fa7-brands:bilibili",
-			url: "https://space.bilibili.com/701864046",
-		},
-		{
-			name: "Gitee",
-			icon: "mdi:git",
-			url: "https://gitee.com/matsuzakayuki",
+			url: "https://space.bilibili.com/3546610866850078",
 		},
 		{
 			name: "GitHub",
 			icon: "fa7-brands:github",
-			url: "https://github.com/matsuzaka-yuki",
-		},
-		{
-			name: "Codeberg",
-			icon: "simple-icons:codeberg",
-			url: "https://codeberg.org",
-		},
-		{
-			name: "Discord",
-			icon: "fa7-brands:discord",
-			url: "https://discord.gg/MqW6TcQtVM",
+			url: "https://github.com/won114514",
 		},
 	],
 };
@@ -443,7 +421,7 @@ export const shareConfig: ShareConfig = {
 
 export const announcementConfig: AnnouncementConfig = {
 	title: "", // 公告标题，填空使用i18n字符串Key.announcement
-	content: "ブログへようこそ！これはサンプルの告知です", // 公告内容
+	content: "", // 公告内容
 	closable: true, // 允许用户关闭公告
 	link: {
 		enable: true, // 启用链接
@@ -457,7 +435,7 @@ export const musicPlayerConfig: MusicPlayerConfig = {
 	enable: true, // 启用音乐播放器功能
 	mode: "meting", // 音乐播放器模式，可选 "local" 或 "meting"
 	meting_api:
-		"https://www.bilibili.uno/api?server=:server&type=:type&id=:id&auth=:auth&r=:r", // Meting API 地址
+		"https://api.injahow.cn/meting/?server=:server&type=:type&id=:id&auth=:auth&r=:r", // Meting API 地址
 	id: "14164869977", // 歌单ID
 	server: "netease", // 音乐源服务器。有的meting的api源支持更多平台,一般来说,netease=网易云音乐, tencent=QQ音乐, kugou=酷狗音乐, xiami=虾米音乐, baidu=百度音乐
 	type: "playlist", // 播单类型
@@ -629,7 +607,7 @@ export const pioConfig: import("./types/config").PioConfig = {
 		home: "Click here to go back to homepage!", // 首页提示
 		skin: ["Want to see my new outfit?", "The new outfit looks great~"], // 换装提示
 		close: "QWQ See you next time~", // 关闭提示
-		link: "https://github.com/matsuzaka-yuki/Mizuki", // 关于链接
+		link: "https://github.com/won114514/Mizuki", // 关于链接
 	},
 };
 
@@ -647,9 +625,9 @@ export const widgetConfigs = {
 
 export const umamiConfig = {
 	enabled: false, // 是否显示Umami统计
-	apiKey: import.meta.env.UMAMI_API_KEY || "api_xxxxxxxx", // API密钥优先从环境变量读取，否则使用配置文件中的值
-	baseUrl: "https://api.umami.is", // Umami Cloud API地址
+	apiKey: import.meta.env.UMAMI_API_KEY || "lk1kuObiAKQpxHKY", // API密钥优先从环境变量读取，否则使用配置文件中的值
+	baseUrl: "https://umami.xiaowon.cn/", // Umami Cloud API地址
 	scripts: `
-<script defer src="XXXX.XXX" data-website-id="ABCD1234"></script>
+<script defer src="https://umami.xiaowon.cn/script.js" data-website-id="66a0e172-8eb0-402b-a06b-a2d6f72269f5"></script>
   `.trim(), // 上面填你要插入的Script,不用再去Layout中插入
 } as const;
