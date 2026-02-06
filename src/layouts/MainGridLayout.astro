@@ -40,6 +40,52 @@ interface Props {
 	headings?: MarkdownHeading[];
 }
 
+// Fetch hitokoto data
+let hitokotoData: string | string[] | null = null;
+let hitokotoError: boolean = false;
+
+async function fetchHitokoto() {
+	// Check if hitokoto is enabled in config
+	if (!siteConfig.banner.homeText?.hitokoto?.enable) {
+		return null;
+	}
+
+	try {
+		const apiUrl = siteConfig.banner.homeText.hitokoto.apiUrl;
+		const isCarouselEnabled = siteConfig.banner.homeText.hitokoto.carousel?.enable;
+		const count = siteConfig.banner.homeText.hitokoto.carousel?.count || 1;
+
+		if (isCarouselEnabled && count > 1) {
+			// Fetch multiple hitokoto entries
+			const hitokotoList: string[] = [];
+			for (let i = 0; i < count; i++) {
+				const response = await fetch(apiUrl);
+				if (!response.ok) {
+					throw new Error(`HTTP error! status: ${response.status}`);
+				}
+				const data = await response.json();
+				hitokotoList.push(data.hitokoto);
+				// Add a small delay between requests to avoid rate limiting
+				if (i < count - 1) {
+					await new Promise(resolve => setTimeout(resolve, 100));
+				}
+			}
+			return hitokotoList;
+		} else {
+			// Fetch single hitokoto entry
+			const response = await fetch(apiUrl);
+			if (!response.ok) {
+				throw new Error(`HTTP error! status: ${response.status}`);
+			}
+			const data = await response.json();
+			return data.hitokoto;
+		}
+	} catch (error) {
+		console.error("Error fetching hitokoto:", error);
+		return null;
+	}
+}
+
 // 类型守卫函数
 // const isBannerSrcObject = (
 // 	src:
@@ -113,6 +159,13 @@ const hasBannerLink = !!siteConfig.banner.credit.url;
 // 检查是否为首页
 const isHomePage = Astro.url.pathname === "/" || Astro.url.pathname === "";
 const showHomeText = siteConfig.banner.homeText?.enable && isHomePage;
+
+// 只在首页且启用了homeText时才获取hitokoto数据
+if (showHomeText) {
+	hitokotoData = await fetchHitokoto();
+	hitokotoError = hitokotoData === null;
+}
+
 // 手机端非首页不显示banner的CSS类
 const mobileNonHomeBannerClass = !isHomePage ? "mobile-hide-banner" : "";
 
@@ -710,20 +763,22 @@ const transparentClass = shouldEnableTransparency
                             {siteConfig.banner.homeText.title}
                         </h1>
                     )}
-                    {siteConfig.banner.homeText?.subtitle && (
+                    {(siteConfig.banner.homeText?.subtitle || siteConfig.banner.homeText?.hitokoto?.enable) && (
                         <h2 class="banner-subtitle text-xl lg:text-3xl text-white/90 drop-shadow-md">
                             <span class="inline-block min-h-[1.2em]">
                                 {siteConfig.banner.homeText.typewriter?.enable ? (
                                     <TypewriterText 
-                                        text={siteConfig.banner.homeText.subtitle}
+                                        text={hitokotoData || siteConfig.banner.homeText.subtitle || ""}
                                         speed={siteConfig.banner.homeText.typewriter.speed}
                                         deleteSpeed={siteConfig.banner.homeText.typewriter.deleteSpeed}
                                         pauseTime={siteConfig.banner.homeText.typewriter.pauseTime}
                                     />
                                 ) : (
-                                    Array.isArray(siteConfig.banner.homeText.subtitle) 
-                                        ? siteConfig.banner.homeText.subtitle[0] 
-                                        : siteConfig.banner.homeText.subtitle
+                                    hitokotoData || (siteConfig.banner.homeText.subtitle ? (
+                                        Array.isArray(siteConfig.banner.homeText.subtitle) 
+                                            ? siteConfig.banner.homeText.subtitle[0] 
+                                            : siteConfig.banner.homeText.subtitle
+                                    ) : "")
                                 )}
                             </span>
                         </h2>

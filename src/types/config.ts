@@ -168,6 +168,15 @@ export type SiteConfig = {
 				deleteSpeed: number; // 删除速度（毫秒）
 				pauseTime: number; // 完整显示后的暂停时间（毫秒）
 			};
+			hitokoto?: {
+				enable: boolean; // 是否启用一言API
+				apiUrl: string; // 一言API地址
+				carousel?: {
+					enable: boolean; // 是否启用轮播效果
+					count: number; // 轮播的一言数量
+					interval?: number; // 轮播间隔（秒）
+				};
+			};
 		};
 		credit: {
 			enable: boolean;

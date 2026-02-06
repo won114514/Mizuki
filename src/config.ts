@@ -155,20 +155,21 @@ export const siteConfig: SiteConfig = {
 		homeText: {
 			enable: true, // 在主页显示自定义文本
 			title: "WONの次元", // 主页横幅主标题
-
-			subtitle: [
-				"没有什么特别的事情，但是有你在就足够了",
-				"现在你依然是我的光",
-				"你知道吗，不知不觉中你已经成为了我的日常",
-				"和你聊天的话，总觉得每天都会变得稍微开心一点",
-				"今天是平凡的一天，但是，是稍微美好的一天",
-			],
 			typewriter: {
 				enable: true, // 启用副标题打字机效果
 
 				speed: 100, // 打字速度（毫秒）
 				deleteSpeed: 50, // 删除速度（毫秒）
 				pauseTime: 2000, // 完全显示后的暂停时间（毫秒）
+			},
+			hitokoto: {
+				enable: true, // 启用一言API
+				apiUrl: "https://hitokoto.xiaowon.cn/", // 一言API地址
+				carousel: {
+					enable: true, // 启用轮播效果
+					count: 5, // 轮播的一言数量
+					interval: 3, // 轮播间隔（秒）
+				},
 			},
 		},
 
