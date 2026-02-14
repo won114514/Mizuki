@@ -81,7 +81,7 @@ http://<你的服务器IP>:<端口号>
 安装完成后，系统会提供一个反向代理地址（如 `http://127.0.0.1:9501`）。你需要在 Nginx 中配置反向代理，将域名请求转发给该地址。
 
 #### 宝塔面板配置示例（新版）：
-![new_nginx_1.png](..\assets\images\new_nginx_1.png)
+![new_nginx_1.png](../assets/images/new_nginx_1.png)
 1. 添加网站（域名如 `shop.example.com`）
 2. 进入「反向代理」 → 「添加反向代理」
 3. 目标 URL 填写 CLI 服务地址（如 `http://127.0.0.1:9501`）
