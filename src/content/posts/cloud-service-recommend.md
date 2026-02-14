@@ -32,7 +32,7 @@ lang: 'zh-CN'
 3. **丰富产品线**：从基础的ECS到AI、大数据等高级服务
 4. **技术支持**：7x24小时技术支持
 
-[点击这里访问阿里云优惠页面](/aliyun/)
+[点击这里访问阿里云优惠页面](https://www.aliyun.com/minisite/goods?userCode=m77xupui)
 
 
 ## 雨云推荐
@@ -51,7 +51,7 @@ lang: 'zh-CN'
 3. **简单易用**：管理后台简洁，易于操作
 4. **快速部署**：支持一键部署常用应用
 
-[点击这里访问雨云优惠页面](/rain/)
+[点击这里访问雨云优惠页面](https://www.rainyun.com/won_)
 ![注册](../assets/images/rainreg.png)
 ## 如何选择
 
