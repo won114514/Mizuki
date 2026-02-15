@@ -34,7 +34,7 @@ lang: 'zh-CN'
 
 ### 1. 下载并上传安装包
 
-从官方渠道获取最新安装包 `mcy-latest.zip`，将其上传至服务器。例如，解压到网站根目录：
+从官方渠道获取最新安装包 [mcy-latest.zip](https://wiki.mcy.im/download.php)，将其上传至服务器。例如，解压到网站根目录：
 
 ```bash
 mkdir -p /www/wwwroot/mcy-shop
