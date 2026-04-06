@@ -164,7 +164,7 @@ export const siteConfig: SiteConfig = {
 			},
 			hitokoto: {
 				enable: true, // 启用一言API
-				apiUrl: "https://hitokoto.xiaowon.cn/", // 一言API地址
+				apiUrl: "https://hitokoto.xiaowon.cn", // 一言API地址
 				carousel: {
 					enable: true, // 启用轮播效果
 					count: 5, // 轮播的一言数量
